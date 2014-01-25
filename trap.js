@@ -6,10 +6,13 @@ function isValidFedexNumber(selection) {
   return fedexRegexp.test(selection);
 }
 
+
 if (isValidFedexNumber(selection)) {
+  var itemName = window.prompt("enter an item name:");
+  var data = {"name": itemName, "number": selection.toString()};
   var xhr = new XMLHttpRequest();
   xhr.open("POST", url, true);
-  xhr.send(selection)
+  xhr.send(JSON.stringify(data));
 } else {
-  alert('invalid number')
+  alert('invalid number');
 }
