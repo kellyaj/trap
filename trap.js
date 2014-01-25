@@ -2,7 +2,8 @@ var selection = window.getSelection();
 var url = "http://localhost:5000/create";
 
 function isValidFedexNumber(selection) {
-  return /\b((96\d\d\d\d\d ?\d\d\d\d|96\d\d) ?\d\d\d\d ?\d\d\d\d( ?\d\d\d)?)\b/i.test(selection);
+  var fedexRegexp = /\b((96\d\d\d\d\d ?\d\d\d\d|96\d\d) ?\d\d\d\d ?\d\d\d\d( ?\d\d\d)?)\b/i
+  return fedexRegexp.test(selection);
 }
 
 if (isValidFedexNumber(selection)) {
