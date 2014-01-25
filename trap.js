@@ -12,6 +12,7 @@ if (isValidFedexNumber(selection)) {
   var data = {"name": itemName, "number": selection.toString()};
   var xhr = new XMLHttpRequest();
   xhr.open("POST", url, true);
+  xhr.setRequestHeader('Content-Type', 'application/json');
   xhr.send(JSON.stringify(data));
 } else {
   alert('invalid number');
