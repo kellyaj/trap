@@ -20,7 +20,7 @@
         "default": "Ctrl+Shift+K",
         "mac": "Command+Shift+K"
        },
-      "description": "toggles the main feature"
+      "description": "sends tracking number to server"
     }
   }
 }
